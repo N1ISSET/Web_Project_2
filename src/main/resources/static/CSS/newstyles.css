@@ -1,0 +1,195 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container for the entire admin layout */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d3e50;
+    padding: 20px;
+    color: white;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+.header .logout a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #d9534f;
+    border-radius: 5px;
+}
+
+/* Main content section */
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar section */
+.sidebar {
+    background-color: #34495e;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    text-align: center; /* Center the content inside sidebar */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Style the welcome image to make it circular with a border */
+.sidebar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #fff; /* Adds a white border around the image */
+    object-fit: cover; /* Ensures the image is correctly contained in the circle */
+    margin-top: 20px; /* Adds spacing from the heading */
+}
+
+.sidebar ul {
+	margin-top:20px;
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1abc9c;
+    padding-left: 10px;
+}
+
+/* Main content area */
+.content {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    padding-left:10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    padding-left:10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/* Form Styles */
+.admin-form {
+    max-width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px;
+    position:relative;
+}
+
+.admin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.admin-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.admin-form input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.admin-form .btn-save {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Positioning */
+    position: absolute;
+    bottom: 20px; /* Adjust distance from the bottom */
+    right: 20px; /* Adjust distance from the right */
+    width: auto; /* Adapt width to content */
+}
+
+.admin-form .btn-save:hover {
+    background-color: #2980b9;
+}
+@media (max-width: 840px) {
+    .main-content,.content,.overview-cards{
+    	flex-direction:column;
+    	align-items: center; 
+    }
+    
+    .sidebar {
+    	width:100%
+	}
+	.content{
+		margin:20px;
+	}
+
+}

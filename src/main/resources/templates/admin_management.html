@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management</title>
+    <link th:href="@{/CSS/managementstyles.css}" rel="stylesheet" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Ahom&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="admin-container">
+    <header class="header">
+        <a th:href="@{/admin_management}">
+            <div class="logo">
+                <img th:src="@{/images/administrator.png}" alt="Admin Logo">
+                <h1>Admin Dashboard</h1>
+            </div>
+        </a>
+        <div class="logout">
+            <a th:href="@{/admin}">Logout</a>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="sidebar">
+            <h2>WELCOME</h2>
+            <img th:src="@{/images/welcome.png}" alt="welcome">
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                        <path fill-rule="evenodd"
+                              d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                    </svg>
+                    <a th:href="@{/new_admin}">&nbspAdd New Admin</a></li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd"
+                              d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                    </svg>
+                    <a th:href="@{/manage_admin}">&nbspManage Admin</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Welcome, Admin!</h2>
+            <p>This is the admin management page where you can manage admins, volunteers, donation records and more.</p>
+
+            <div class="overview-cards">
+                <div class="card">
+                    <h3>Volunteer</h3>
+                    <p>Manage volunteers details from volunteer application form.</p>
+                    <a th:href="@{/volunteer_management}">Manage</a>
+                </div>
+                <div class="card">
+                    <h3>Donation</h3>
+                    <p>Manage donation histories and donor details.</p>
+                    <a th:href="@{/donation_management}">Manage</a>
+                </div>
+                <div class="card">
+                    <h3>Contact</h3>
+                    <p>Manage messages and user details from contact page.</p>
+                    <a th:href="@{/contact_management}">Manage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
